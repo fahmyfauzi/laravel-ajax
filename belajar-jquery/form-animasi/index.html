@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Animasi</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kotak">
+        <h1>
+            Membuat Animasi JQuery <br>
+            www.malasbangat.com
+        </h1>
+
+        <form action="" class="form">
+            <input type="text" name="nama" id="nama" placeholder="Masukan nama anda..." autocomplete="off">
+            <input type="text" name="alamat" id="alamat" placeholder="Masukan alamat anda..." autocomplete="off">
+            <input type="text" name="pekerjaan" id="pekerjaan" placeholder="Masukan pekerjaan anda.." autocomplete="off">
+        </form>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $('#nama').keyup(function(){
+                $('#alamat').slideDown();
+            });
+            $('#alamat').keyup(function(){
+                $('#pekerjaan').fadeIn();
+            });
+        })
+    </script>
+</body>
+</html>

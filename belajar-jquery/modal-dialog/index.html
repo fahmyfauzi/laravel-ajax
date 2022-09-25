@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Dialog</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center><h1>Modal Dialog Tutorial</h1></center>
+    <button id="tombol">Click Me!</button>
+
+    <!-- Modal Dialog -->
+    <div id="bg"></div>
+    <div id="modal-kotak">
+        <div id="atas">
+            <h2>Halo. Ini adalah modal dialog</h2>
+        </div>
+        <div id="bawah">
+            <button id="tombol-tutup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('#tombol').click(function(){
+                $('#modal-kotak , #bg').fadeIn('slow');
+            });
+
+            $('#tombol-tutup').click(function(){
+                $('#modal-kotak, #bg').fadeOut('slow');
+            })
+        })
+    </script>
+</body>
+</html>
